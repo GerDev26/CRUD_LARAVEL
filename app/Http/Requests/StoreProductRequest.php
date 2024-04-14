@@ -22,7 +22,6 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
         ];
     }
 }

@@ -20,7 +20,10 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::controller(ProductController::class)->group(function(){
-    Route::get('product/all', 'index');
-    Route::get('product/show', 'show');
-    Route::post('product/new', 'store');
+    Route::get('product', 'index');
+    Route::get('product/id={id}', 'searchById');
+    Route::get('product/s', 'search');
+    Route::post('product', 'store');
+    Route::put('product/{id}', 'update');
+    Route::delete('product/{id}', 'destroy');
 });
